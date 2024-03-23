@@ -33,7 +33,7 @@ CREATE TABLE reparto (
 TRUNCATE TABLE peliculas, reparto;
 
 COPY peliculas(id, titulo, año_estreno, director)
-FROM '<rutade del archivo>/peliculas.csv' WITH WITH (FORMAT csv, HEADER true);
+FROM '<rutade del archivo>/peliculas.csv' WITH (FORMAT csv, HEADER true);
 
 COPY reparto(pelicula_id, actor)
 FROM '/<rutade del archivo>/reparto.csv' WITH (FORMAT csv, HEADER false);
